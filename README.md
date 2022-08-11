@@ -20,5 +20,8 @@ Product_Category_1 to _3: Category of the product. All 3 are already labaled wit
 Purchase: Purchase amount.
 
 # This project intends to achieve the following:
-1 Predict the amount of purchases by a customer using simple regression model based on certain predictor variables.\
-2 To identify most important variables that help predict the purchasing price.
+1. Predict the amount of purchases by a customer using simple regression model based on certain predictor variables.\
+2. To identify most important variables that help predict the purchasing price.
+
+
+more details soon.
