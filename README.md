@@ -1,8 +1,8 @@
 # Black-Friday-Purchase-Prediction-Using-R
 ### INTRODUCTION
-Black Friday is a colloquial term for the Friday after Thanksgiving in the United States. It traditionally marks the start of the Christmas shopping season in the United States. Many stores offer highly promoted sales at discounted prices and often open early, sometimes as early as midnight or even on Thanksgiving.
-source: Wikipedia
-This Project seeks to predict the amount of sales in a retail store on a black friday using R programming language.
+Black Friday is a colloquial term for the Friday after Thanksgiving in the United States. It traditionally marks the start of the Christmas shopping season in the United States. Many stores offer highly promoted sales at discounted prices and often open early, sometimes as early as midnight or even on Thanksgiving.\
+source: Wikipedia\
+This Project seeks to predict the amount of purchase in a retail store on a black friday using R programming language.\
 
 The data set was obtained from kaggle.
 # DATASET DESCRIPTION
