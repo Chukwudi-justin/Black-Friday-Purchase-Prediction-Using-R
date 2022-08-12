@@ -20,7 +20,7 @@ Product_Category_1 to _3: Category of the product. All 3 are already labaled wit
 Purchase: Purchase amount.
 
 # This project intends to achieve the following:
-1. Predict the amount of purchases by a customer using simple regression model based on certain predictor variables.\
+1. Predict the amount of purchases by a customer using simple regression model based on certain predictor variables.
 2. To identify most important variables that help predict the purchasing price.
 
 
@@ -76,9 +76,48 @@ To clean up the data and prepare it for model building.\
 I obtained the summary of missing values in each column of the data set using the R code. **which(colSums(is.na(df_train)) > 0**. I observed there were missing value in 2 columns, Product_category_2 and Product_category_3, I proceeded to obtain the percentage of the missing value in both columns and noticed Product_category_3 had 70% of its data missing. This is much and can affect the model, I had to drop the column entirely and replaced the missing value in Product_category_2 with the median value.\
 
 
-I also transformed all categorical variable with **string values** into a form that is allowed by models for our machine algorithm to make better prediction.\
+I also transformed all categorical variable with **string values** into a form that is allowed by models for our machine algorithm to make better prediction and I dropped columns that had no significant effect on the target variable like -User_ID, -Product_ID.\
 
 **Purchase** clearly is the target variable while every other features is taken as the independent variable.\
 
 ## Building The Model and Accuracy Analysis
-I used a simple linear Regression 
+I used a simple linear Regression, This model, like most of the supervised machine learning algorithms, makes a prediction based on the input features. The predicted output values are used for comparisons with desired outputs I used **Summary()** function to observe the **P-Value**, **R-squared** that measures the proportion of the variation in the dependent variable explained by all of the independent variables in the model. I also took note of the **F-statistics**  
+
+## Correlation
+![corre](black_corr.png)
+
+I observed the relationship between the features and the target variable, with some having positive correlation some had negative correlation.\
+
+## Linear Regression
+
+After building the model I observed the following:
+The P-value was okay, and discovered that both the **R-Sqaured** and the **F-statistics** can be improved since the column **Number Of Years Spent in city** does not have much influence on the purchases.\
+
+After Dropping the column, I obtained a better **F-statistics** Value.
+
+## Model PLots
+![plot1](modelplot1.png)
+
+![plot2](modelPlot2.png)
+
+![Plot3](modelplot3.png)
+
+![Plot4](modelplot4.png)
+
+## Model Analysis
+![resid](black_residual.png)
+
+
+# Most important variables that help predict the purchasing price:
+![Varimp](Var_importance.png)
+
+Using the **VarImp** I obtained columns that had most impact in the prediction of purchasing price.\
+
+## Prediction
+I loaded the test data set and used the linear model built to predict purchase price based on the independent features.\
+Here is a glimpse of the first 10 rows of the predicted price.
+![Pred](New_predicted.png)
+
+## Conclusion:
+Based on the values of the **F-statistics**, **P-value** and **R-squared** we can conclude that our model performed well but can be improved.\
+We also took note that customers who want **product_Category_1** were more likely to purchase during the black friday sales.
