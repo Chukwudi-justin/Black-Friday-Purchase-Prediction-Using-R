@@ -33,7 +33,7 @@ As can be observed that there were more male customers for the balck friday sale
 ## Age Distribution By Gender
 ![Age](black_Age.png)
 
-We observe that most for the customers where between the age brackets 18 - 45, with the predominant age bracket being 26 - 35. This is expected because most youths prefer buying during discount promo, since they are getting the same product at a discounted price.
+We observe that most of the customers where between the age brackets 18 - 45, with the predominant age bracket being 26 - 35. This is expected because most youths prefer buying during discount promo, since they are getting the same product at a discounted price.
 
 
 ## City Category
@@ -71,5 +71,14 @@ Interestingly customers prefer spending only a year, regardless the city they li
 
 As we observed earlier people within the age of 26 - 35 had most purchases.
 
+## DATA PROCESSING
+To clean up the data and prepare it for model building.\
+I obtained the summary of missing values in each column of the data set using the R code. **which(colSums(is.na(df_train)) > 0**. I observed there were missing value in 2 columns, Product_category_2 and Product_category_3, I proceeded to obtain the percentage of the missing value in both columns and noticed Product_category_3 had 70% of its data missing. This is much and can affect the model, I had to drop the column entirely and replaced the missing value in Product_category_2 with the median value.\
 
 
+I also transformed all categorical variable with **string values** into a form that is allowed by models for our machine algorithm to make better prediction.\
+
+**Purchase** clearly is the target variable while every other features is taken as the independent variable.\
+
+## Building The Model and Accuracy Analysis
+I used a simple linear Regression 
