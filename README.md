@@ -86,12 +86,12 @@ I used a simple linear Regression, This model, like most of the supervised machi
 ## Correlation
 ![corre](black_corr.png)
 
-I observed the relationship between the features and the target variable, with some having positive correlation some had negative correlation.\
+I observed the relationship between the features and the target variable, with some having positive correlation some had negative correlation.
 
 ## Linear Regression
 
 After building the model I observed the following:
-The P-value was okay, and discovered that both the **R-Sqaured** and the **F-statistics** can be improved since the column **Number Of Years Spent in city** does not have much influence on the purchases.\
+The P-value was okay, and discovered that both the **R-Sqaured** and the **F-statistics** can be improved since the column **Number Of Years Spent in city** does not have much influence on the purchases.
 
 After Dropping the column, I obtained a better **F-statistics** Value.
 
